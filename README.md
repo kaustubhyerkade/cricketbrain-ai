@@ -47,3 +47,7 @@ Frontend UI: React.js, Tailwind CSS (for the dark, cinematic styling), and Lucid
 AI Backend Engine: Google Gemini (gemini-3-flash-preview), strictly guided by structured JSON schema generation.
 
 Live Data Source: Integrated to work with CricAPI (or fallback to the custom JS simulation engine).
+
+App Screenshots & UI Previews
+
+Screenshot.png
