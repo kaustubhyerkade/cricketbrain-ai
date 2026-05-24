@@ -100,7 +100,7 @@ async function fetchLiveMatchFromAPI() {
 // --- AI LOGIC (GEMINI) ---
 
 async function fetchAgentReactions(matchState) {
-  const apiKey = "AIzaSyBEVHZeVTxlDl3tboivWiKZLdn44AYpkKk"; // Canvas auto-injects
+  const apiKey = ""; // Canvas auto-injects
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
 
   const overs = Math.floor(matchState.balls / 6) + '.' + (matchState.balls % 6);
