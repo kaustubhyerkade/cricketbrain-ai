@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+CricketBrain AI: Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CricketBrain AI is a futuristic, real-time multi-agent cricket intelligence platform. It acts as a live "war room," transforming the traditional cricket-watching experience into an interactive, AI-driven tactical command center.
 
-Currently, two official plugins are available:
+Instead of just showing live scores like a standard sports app, CricketBrain AI simulates the minds of legendary cricketers. As a match progresses ball-by-ball, the platform uses artificial intelligence to generate immediate, personality-driven reactions, strategies, and predictions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Core Concept: "Watching legendary cricket minds think live"
 
-## React Compiler
+Fans constantly debate what their favorite captains or players would do in high-pressure situations. CricketBrain turns that imagination into reality. It currently features six distinct AI agents, each programmed with specific cricketing philosophies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+MS Dhoni: Calm, calculated, focuses on taking the game deep.
 
-## Expanding the ESLint configuration
+Virat Kohli: Intense, aggressive strike rotation, high intent.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Rohit Sharma: Instinctive field reading, finding gaps, tactical flow.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Jasprit Bumrah: Analytical bowling strategy, surgical pressure.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Rahul Dravid: Composed, risk-minimization, partnership building.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Ricky Ponting: Fearless, dominating, attacks the bowler.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Key Features Built into the Platform
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Multi-Agent AI Engine: Powered by the Gemini AI API, the platform sends the exact live match state to the AI, which returns structured JSON containing 6 distinct tactical responses, risk assessments, and deep insights.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Live Match Integration: Capable of polling real-world cricket APIs (like CricAPI) to fetch live scores, overs, and wickets every 15 seconds.
+
+Advanced Simulation Mode: For offline testing or when live matches aren't available, the app features a deep simulation engine that mathematically calculates ball-by-ball events, strike rotation, and individual player stats.
+
+Live Win Predictor: The AI calculates real-time win probabilities for both teams and identifies momentum shifts based on the match context, displayed via a dynamic progress bar.
+
+Broadcast-Style Interface: Designed like a high-end sports news channel or F1 strategy room, featuring:
+
+A continuous scrolling "Breaking News" ticker.
+
+Dense, professional-grade statistics tables (CRR, RRR, Partnerships, individual batter/bowler stats).
+
+Glowing tactical cards for the AI experts.
+
+A full-screen immersive mode.
+
+Technical Stack
+
+Frontend UI: React.js, Tailwind CSS (for the dark, cinematic styling), and Lucide React (for iconography).
+
+AI Backend Engine: Google Gemini (gemini-3-flash-preview), strictly guided by structured JSON schema generation.
+
+Live Data Source: Integrated to work with CricAPI (or fallback to the custom JS simulation engine).
